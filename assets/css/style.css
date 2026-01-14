@@ -622,3 +622,9 @@ textarea{ resize: vertical; }
   font-weight: 700;
   font-size: 13px;
 }
+
+/* Award image: fill the box (may crop) */
+.award-row .media.small.media-fixed img{
+  object-fit: cover;
+}
+
