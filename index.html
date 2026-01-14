@@ -84,6 +84,7 @@
         <div class="hero-visual">
           <div class="avatar-card" aria-label="Portrait">
             <div class="avatar avatar-photo">
+              <!-- Uses your photo: assets/img/MH.jpg -->
               <img src="assets/img/MH.jpg" alt="Portrait of Swam Htet Wint Yee" loading="lazy" />
             </div>
             <div class="avatar-meta">
@@ -142,6 +143,15 @@
               </span>
               GitHub
             </a>
+
+            <a class="icon-pill" href="assets/resume.pdf" target="_blank" rel="noreferrer">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="currentColor" d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM8 12h8v2H8v-2Zm0 4h8v2H8v-2Zm0-8h5v2H8V8Z"/>
+                </svg>
+              </span>
+              Resume (PDF)
+            </a>
           </div>
         </div>
       </div>
@@ -155,7 +165,7 @@
         </div>
 
         <div class="split">
-          <div class="media card-media lg" aria-label="School photo">
+          <div class="media media-fixed" aria-label="School photo">
             <img src="assets/img/school.jpg" alt="Temasek Polytechnic" loading="lazy" />
           </div>
 
@@ -163,14 +173,15 @@
             <h3>Temasek Polytechnic</h3>
             <p class="muted">Diploma in Computer Engineering</p>
             <div class="bullets">
-              <div class="bullet"><span class="b-dot" aria-hidden="true"></span><span>Expected graduation: May 2026</span></div>
+              <div class="bullet"><span class="b-dot" aria-hidden="true"></span><span>Expected graduation: <strong>May 2026</strong></span></div>
               <div class="bullet"><span class="b-dot" aria-hidden="true"></span><span>Core focus: embedded systems, IoT, automation, and data</span></div>
             </div>
 
             <div class="divider-soft" aria-hidden="true"></div>
 
             <div class="award-row">
-              <div class="media small card-media xs" aria-label="Award photo">
+              <div class="media small media-fixed" aria-label="Award photo">
+                <!-- Your award is PNG -->
                 <img src="assets/img/award.png" alt="Director’s List Award" loading="lazy" />
               </div>
               <div class="award-copy">
@@ -271,7 +282,8 @@
 
         <div class="stack">
           <article class="proj">
-            <div class="proj-media card-media md">
+            <div class="proj-media media-fixed">
+              <!-- If you don't have this image yet, add smart-aqua.jpg or change the filename -->
               <img src="assets/img/smart-aqua.jpg" alt="Smart Aqua Grow project" loading="lazy" />
             </div>
             <div class="proj-copy">
@@ -294,7 +306,7 @@
           </article>
 
           <article class="proj proj-alt">
-            <div class="proj-media card-media md">
+            <div class="proj-media media-fixed">
               <img src="assets/img/ic-tester.png" alt="IC Tester Monitoring System" loading="lazy" />
             </div>
             <div class="proj-copy">
@@ -315,7 +327,7 @@
           </article>
 
           <article class="proj">
-            <div class="proj-media card-media md">
+            <div class="proj-media media-fixed">
               <img src="assets/img/smart-home.jpeg" alt="Smart Home IoT Monitoring and Control System" loading="lazy" />
             </div>
             <div class="proj-copy">
@@ -330,14 +342,15 @@
                 <span class="tag">Dashboards</span>
               </div>
               <ul class="mini-bullets">
-                <li>Streamed temperature and humidity telemetry and validated real-time updates end-to-end.</li>
+                <li>Streamed temperature &amp; humidity telemetry and validated real-time updates end-to-end.</li>
                 <li>Designed threshold alert logic for safer operation and visibility.</li>
               </ul>
             </div>
           </article>
 
           <article class="proj proj-alt">
-            <div class="proj-media card-media md">
+            <div class="proj-media media-fixed">
+              
               <img src="assets/img/recipe.png" alt="Recipe Sharing Platform" loading="lazy" />
             </div>
             <div class="proj-copy">
@@ -358,7 +371,7 @@
           </article>
 
           <article class="proj">
-            <div class="proj-media card-media md">
+            <div class="proj-media media-fixed">
               <img src="assets/img/traffic-light.jpg" alt="Traffic Light and Pedestrian Crossing Controller" loading="lazy" />
             </div>
             <div class="proj-copy">
@@ -380,9 +393,7 @@
           </article>
         </div>
 
-        <p class="hint" style="margin-top:14px;">
-          If a project image doesn’t show, the filename must match exactly (including .jpg / .png / .jpeg and upper/lowercase).
-        </p>
+        
       </div>
     </section>
 
@@ -395,7 +406,7 @@
 
         <div class="stack">
           <article class="xp">
-            <div class="xp-media card-media md">
+            <div class="xp-media media-fixed">
               <img src="assets/img/osim.jpeg" alt="OSIM International" loading="lazy" />
             </div>
             <div class="xp-copy">
@@ -410,7 +421,8 @@
           </article>
 
           <article class="xp xp-alt">
-            <div class="xp-media card-media md">
+            <div class="xp-media media-fixed">
+              <!-- Your file is MH.jpg; if this is not MACCHA photo, replace with correct file -->
               <img src="assets/img/MH.jpg" alt="Service crew experience" loading="lazy" />
             </div>
             <div class="xp-copy">
@@ -460,7 +472,7 @@
 
             <div class="divider-soft" aria-hidden="true"></div>
 
-            <div class="media card-media md" aria-label="Profile photo">
+            <div class="contact-photo media-fixed" aria-label="Profile photo">
               <img src="assets/img/MH.jpg" alt="Profile photo of Swam" loading="lazy" />
             </div>
           </div>
@@ -524,13 +536,12 @@
     document.getElementById('contactForm')?.addEventListener('submit', (e) => {
       e.preventDefault();
       const form = e.target;
+      const name = encodeURIComponent(form.name.value.trim());
+      const from = encodeURIComponent(form.from.value.trim());
+      const message = encodeURIComponent(form.message.value.trim());
 
       const subject = encodeURIComponent(`Portfolio message from ${form.name.value.trim()}`);
-      const body = encodeURIComponent(
-        `Name: ${form.name.value.trim()}\n` +
-        `Email: ${form.from.value.trim()}\n\n` +
-        `Message:\n${form.message.value.trim()}`
-      );
+      const body = encodeURIComponent(`Name: ${form.name.value.trim()}\nEmail: ${form.from.value.trim()}\n\nMessage:\n${form.message.value.trim()}`);
 
       window.location.href = `mailto:swamhtetwintyee2352@gmail.com?subject=${subject}&body=${body}`;
       form.reset();
