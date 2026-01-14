@@ -97,6 +97,7 @@ code{
   max-width: 68ch;
 }
 
+/* Header / Nav */
 .header{
   position: sticky;
   top: 0;
@@ -413,15 +414,6 @@ code{
 }
 @media (max-width: 980px){ .split{ grid-template-columns: 1fr; } }
 
-.media{
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid rgba(15,23,42,.10);
-  background: rgba(255,255,255,.55);
-  box-shadow: 0 16px 45px rgba(15,23,42,.08);
-}
-.media.small{ border-radius: 18px; }
-
 .content h3{ margin: 0 0 6px; font-size: 20px; letter-spacing: -0.02em; }
 .muted{ margin: 0; color: var(--muted); line-height: 1.65; }
 .bullets{ margin-top: 14px; display: grid; gap: 10px; }
@@ -443,32 +435,47 @@ code{
 .award-copy .kicker{ margin-bottom: 8px; }
 .award-copy h4{ margin: 0 0 6px; font-size: 18px; letter-spacing: -0.02em; }
 
-/* Fix ALL image sizing inside card areas */
-.media-fixed{
-  height: 320px;
-}
-.media.small.media-fixed{
-  height: 180px;
-}
-.proj-media.media-fixed, .xp-media.media-fixed{
-  height: 280px;
-}
-@media (max-width: 980px){
-  .media-fixed{ height: 280px; }
-  .proj-media.media-fixed, .xp-media.media-fixed{ height: 260px; }
-  .media.small.media-fixed{ height: 180px; }
+/* =========================
+   PERFECT CARD IMAGE FIT
+   same height, no gaps
+   ========================= */
+.card-media{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,.10);
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 16px 45px rgba(15,23,42,.08);
 }
 
-.media-fixed img,
-.proj-media img,
-.xp-media img{
+/* sizes */
+.card-media.lg{ height: 320px; }
+.card-media.md{ height: 280px; }
+.card-media.sm{ height: 180px; }
+.card-media.xs{ height: 140px; }
+
+@media (max-width: 980px){
+  .card-media.lg{ height: 280px; }
+  .card-media.md{ height: 260px; }
+  .card-media.sm{ height: 180px; }
+}
+
+/* image fills wrapper */
+.card-media img{
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* makes the image fit inside the card size */
-  object-position: center;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
+/* OPTIONAL: whole image visible (no crop), may create letterbox */
+.card-media.contain img{
+  object-fit: contain;
+  background: rgba(255,255,255,.72);
+}
+
+/* Grid */
 .grid-2{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -551,6 +558,7 @@ code{
   border: 1px solid rgba(15,23,42,.10);
   background: rgba(255,255,255,.55);
 }
+
 .proj-copy, .xp-copy{ padding: 4px 2px; }
 .proj-copy h3, .xp-copy h3{
   margin: 0 0 8px;
