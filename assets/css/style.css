@@ -454,11 +454,15 @@ code{
    object-fit: cover; 
    object-position: center; }
 
-/* award: show full image (no crop) */
+/* award: fill the box (cropped, no gaps) */
 .card-media.award img{
-  object-fit: contain;
-  background: rgba(255,255,255,.75);
+  object-fit: cover;
+  background: transparent;
 }
+.card-media.award img{
+  object-position: center;
+}
+
 
 /* Grid */
 .grid-2{
