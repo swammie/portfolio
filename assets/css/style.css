@@ -194,13 +194,13 @@ code{
   background: rgba(255,255,255,.65);
   border: 1px solid rgba(15,23,42,.10);
 }
-.btn-soft:hover{ background: rgba(255,255,255,.85); }
+.btn-soft:hover{ background: rgba(255,255,255,.85); text-decoration:none; }
 .btn-ghost{
   color: rgba(15,23,42,.86);
   background: transparent;
   border: 1px solid rgba(15,23,42,.12);
 }
-.btn-ghost:hover{ background: rgba(26,166,164,.07); }
+.btn-ghost:hover{ background: rgba(26,166,164,.07); text-decoration:none; }
 
 /* Mobile nav */
 .nav-toggle{
@@ -318,21 +318,6 @@ code{
   display: grid;
   gap: 12px;
 }
-.avatar{
-  width: 100%;
-  aspect-ratio: 16/10;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(15,23,42,.10);
-  background: rgba(255,255,255,.55);
-}
-.avatar img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
 .avatar-meta{ display: grid; gap: 4px; }
 .avatar-name{ font-weight: 800; letter-spacing: -0.02em; }
 .avatar-role{ color: rgba(15,23,42,.68); font-weight: 600; font-size: 14px; }
@@ -436,8 +421,7 @@ code{
 .award-copy h4{ margin: 0 0 6px; font-size: 18px; letter-spacing: -0.02em; }
 
 /* =========================
-   PERFECT CARD IMAGE FIT
-   same height, no gaps
+   IMAGE FIT SYSTEM (NO GAPS)
    ========================= */
 .card-media{
   width: 100%;
@@ -448,19 +432,21 @@ code{
   box-shadow: 0 16px 45px rgba(15,23,42,.08);
 }
 
-/* sizes */
+/* fixed heights (like your card screenshot) */
 .card-media.lg{ height: 320px; }
-.card-media.md{ height: 280px; }
-.card-media.sm{ height: 180px; }
-.card-media.xs{ height: 140px; }
+.card-media.md{ height: 260px; }
+.card-media.proj-img{ height: 240px; }
+.card-media.xp-img{ height: 220px; }
+.card-media.award{ height: 120px; }
 
 @media (max-width: 980px){
   .card-media.lg{ height: 280px; }
-  .card-media.md{ height: 260px; }
-  .card-media.sm{ height: 180px; }
+  .card-media.md{ height: 240px; }
+  .card-media.proj-img{ height: 220px; }
+  .card-media.xp-img{ height: 210px; }
 }
 
-/* image fills wrapper */
+/* default: crop nicely */
 .card-media img{
   width: 100%;
   height: 100%;
@@ -469,10 +455,10 @@ code{
   object-position: center;
 }
 
-/* OPTIONAL: whole image visible (no crop), may create letterbox */
-.card-media.contain img{
+/* award: show full image (no crop) */
+.card-media.award img{
   object-fit: contain;
-  background: rgba(255,255,255,.72);
+  background: rgba(255,255,255,.75);
 }
 
 /* Grid */
@@ -543,20 +529,13 @@ code{
   border: 1px solid rgba(15,23,42,.10);
   box-shadow: var(--shadow);
 }
-.proj-alt .proj-media, .xp-alt .xp-media{ order: 2; }
+.proj-alt .card-media, .xp-alt .card-media{ order: 2; }
 .proj-alt .proj-copy, .xp-alt .xp-copy{ order: 1; }
 
 @media (max-width: 980px){
   .proj, .xp{ grid-template-columns: 1fr; }
-  .proj-alt .proj-media, .xp-alt .xp-media{ order: 1; }
+  .proj-alt .card-media, .xp-alt .card-media{ order: 1; }
   .proj-alt .proj-copy, .xp-alt .xp-copy{ order: 2; }
-}
-
-.proj-media, .xp-media{
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(15,23,42,.10);
-  background: rgba(255,255,255,.55);
 }
 
 .proj-copy, .xp-copy{ padding: 4px 2px; }
@@ -642,55 +621,4 @@ textarea{ resize: vertical; }
   color: rgba(15,23,42,.60);
   font-weight: 700;
   font-size: 13px;
-}
-/* =========================================
-   FIX: Make ALL card images fit the box
-   (no gaps, clean crop like your screenshot)
-   Paste this at the END of style.css
-   ========================================= */
-
-/* Any image wrapper used in your HTML */
-.media-fixed,
-.proj-media,
-.xp-media,
-.avatar {
-  overflow: hidden;
-}
-
-/* Force images to fill their wrapper */
-.media-fixed img,
-.proj-media img,
-.xp-media img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Give consistent heights like your card example */
-.proj-media,
-.xp-media {
-  height: 240px;
-}
-
-@media (max-width: 980px) {
-  .proj-media,
-  .xp-media {
-    height: 210px;
-  }
-}
-
-/* Education big image */
-.media.media-fixed {
-  height: 320px;
-}
-
-/* Small media (award) usually should NOT crop */
-.media.small.media-fixed {
-  height: 120px;
-}
-.media.small.media-fixed img {
-  object-fit: contain;      /* keeps award fully visible */
-  background: rgba(255,255,255,.75);
 }
