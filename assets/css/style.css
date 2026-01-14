@@ -96,6 +96,7 @@ code{
   max-width: 68ch;
 }
 
+/* Header */
 .header{
   position: sticky;
   top: 0;
@@ -180,6 +181,7 @@ code{
   cursor: pointer;
   user-select: none;
   text-decoration: none !important;
+  transition: transform .15s ease, filter .15s ease, background .15s ease;
 }
 .btn-primary{
   color: #ffffff;
@@ -316,15 +318,48 @@ code{
   display: grid;
   gap: 12px;
 }
-.avatar{
+
+/* Reusable media frame (THIS fixes oversized photos) */
+.media-frame{
   width: 100%;
-  aspect-ratio: 16/10;
   border-radius: 18px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(26,166,164,.20), rgba(46,199,190,.10));
   border: 1px solid rgba(15,23,42,.10);
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 16px 45px rgba(15,23,42,.08);
   position: relative;
 }
+
+.media-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;       /* crop to fit */
+  object-position: center; /* keep center */
+}
+
+.media-frame.is-missing{
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.55), rgba(255,255,255,.25)),
+    radial-gradient(420px 220px at 30% 40%, rgba(46,199,190,.14), transparent 70%);
+}
+.media-frame.is-missing::after{
+  content: attr(data-missing);
+  color: rgba(15,23,42,.62);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 14px;
+  text-align: center;
+}
+
+/* specific sizes */
+.avatar.media-frame{ aspect-ratio: 16/10; }
+.media.small{ border-radius: 18px; }
+.media.small.media-frame{ aspect-ratio: 4/3; }
+
 .avatar-meta{ display: grid; gap: 4px; }
 .avatar-name{ font-weight: 800; letter-spacing: -0.02em; }
 .avatar-role{ color: rgba(15,23,42,.68); font-weight: 600; font-size: 14px; }
@@ -405,15 +440,6 @@ code{
   align-items: start;
 }
 @media (max-width: 980px){ .split{ grid-template-columns: 1fr; } }
-
-.media{
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid rgba(15,23,42,.10);
-  background: rgba(255,255,255,.55);
-  box-shadow: 0 16px 45px rgba(15,23,42,.08);
-}
-.media.small{ border-radius: 18px; }
 
 .content h3{ margin: 0 0 6px; font-size: 20px; letter-spacing: -0.02em; }
 .muted{ margin: 0; color: var(--muted); line-height: 1.65; }
@@ -512,13 +538,18 @@ code{
   .proj-alt .proj-copy, .xp-alt .xp-copy{ order: 2; }
 }
 
-.proj-media, .xp-media{
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(15,23,42,.10);
-  background: rgba(255,255,255,.55);
-  height: 260px; /* keeps all project/experience images same height */
+/* fixed media heights so every image fits nicely */
+.proj-media.media-frame,
+.xp-media.media-frame{
+  min-height: 260px;
 }
+@media (max-width: 980px){
+  .proj-media.media-frame,
+  .xp-media.media-frame{
+    min-height: 220px;
+  }
+}
+
 .proj-copy, .xp-copy{ padding: 4px 2px; }
 .proj-copy h3, .xp-copy h3{
   margin: 0 0 8px;
@@ -572,7 +603,6 @@ code{
   color: rgba(11,111,112,.95);
   flex: 0 0 auto;
 }
-.contact-photo .media{ height: 260px; }
 
 .form{ margin-top: 12px; display: grid; gap: 12px; }
 label span{
@@ -604,23 +634,3 @@ textarea{ resize: vertical; }
   font-weight: 700;
   font-size: 13px;
 }
-
-/* =========================
-   IMPORTANT: Real image fitting
-   (handles different photo sizes)
-   ========================= */
-
-.img-real{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;       /* crops nicely to fill the box */
-  object-position: center; /* crop from center */
-}
-
-/* Education images sizing */
-.split .media{ height: 320px; }
-.award-row .media.small{ height: 190px; }
-
-/* Avatar already uses aspect-ratio, this makes the img fill it */
-.avatar .img-real{ width: 100%; height: 100%; }
