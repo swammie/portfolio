@@ -325,26 +325,6 @@ code{
   border: 1px solid rgba(15,23,42,.10);
   position: relative;
 }
-.avatar-inner{
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(260px 260px at 70% 30%, rgba(46,199,190,.24), transparent 70%),
-    radial-gradient(220px 220px at 35% 70%, rgba(26,166,164,.20), transparent 72%),
-    linear-gradient(135deg, rgba(255,255,255,.35), rgba(255,255,255,.10));
-}
-.avatar-initials{
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  font-size: 38px;
-  color: rgba(15,23,42,.78);
-  background: rgba(255,255,255,.62);
-  padding: 10px 14px;
-  border-radius: 16px;
-  border: 1px solid rgba(15,23,42,.10);
-}
 .avatar-meta{ display: grid; gap: 4px; }
 .avatar-name{ font-weight: 800; letter-spacing: -0.02em; }
 .avatar-role{ color: rgba(15,23,42,.68); font-weight: 600; font-size: 14px; }
@@ -434,18 +414,6 @@ code{
   box-shadow: 0 16px 45px rgba(15,23,42,.08);
 }
 .media.small{ border-radius: 18px; }
-.img-ph{
-  min-height: 220px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 18px;
-  color: rgba(15,23,42,.62);
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.55), rgba(255,255,255,.25)),
-    radial-gradient(420px 220px at 30% 40%, rgba(46,199,190,.14), transparent 70%);
-}
-.media.small .img-ph{ min-height: 170px; }
 
 .content h3{ margin: 0 0 6px; font-size: 20px; letter-spacing: -0.02em; }
 .muted{ margin: 0; color: var(--muted); line-height: 1.65; }
@@ -549,8 +517,8 @@ code{
   overflow: hidden;
   border: 1px solid rgba(15,23,42,.10);
   background: rgba(255,255,255,.55);
+  height: 260px; /* keeps all project/experience images same height */
 }
-.proj-media .img-ph, .xp-media .img-ph{ min-height: 240px; }
 .proj-copy, .xp-copy{ padding: 4px 2px; }
 .proj-copy h3, .xp-copy h3{
   margin: 0 0 8px;
@@ -574,9 +542,6 @@ code{
   line-height: 1.65;
   font-weight: 600;
 }
-.proj-links{ margin-top: 12px; }
-.link{ font-weight: 900; color: rgba(11,111,112,.95); text-decoration: none; }
-.link:hover{ text-decoration: underline; text-decoration-color: rgba(26,166,164,.6); }
 
 /* Contact */
 .contact-grid{
@@ -607,7 +572,7 @@ code{
   color: rgba(11,111,112,.95);
   flex: 0 0 auto;
 }
-.contact-photo .img-ph{ min-height: 220px; }
+.contact-photo .media{ height: 260px; }
 
 .form{ margin-top: 12px; display: grid; gap: 12px; }
 label span{
@@ -639,3 +604,23 @@ textarea{ resize: vertical; }
   font-weight: 700;
   font-size: 13px;
 }
+
+/* =========================
+   IMPORTANT: Real image fitting
+   (handles different photo sizes)
+   ========================= */
+
+.img-real{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;       /* crops nicely to fill the box */
+  object-position: center; /* crop from center */
+}
+
+/* Education images sizing */
+.split .media{ height: 320px; }
+.award-row .media.small{ height: 190px; }
+
+/* Avatar already uses aspect-ratio, this makes the img fill it */
+.avatar .img-real{ width: 100%; height: 100%; }
