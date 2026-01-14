@@ -446,16 +446,13 @@ code{
   .card-media.xp-img{ height: 210px; }
 }
 
-/* default: crop nicely */
-/* award: fill the box (cropped, no gaps) */
-.card-media.award img{
-  object-fit: cover;
-  background: transparent;
-}
-.card-media.award img{
-  object-position: center;
-}
-
+/* default: crop nicely */ 
+.card-media img{ 
+   width: 100%; 
+   height: 100%; 
+   display: block; 
+   object-fit: cover; 
+   object-position: center; }
 
 /* award: show full image (no crop) */
 .card-media.award img{
