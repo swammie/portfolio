@@ -193,7 +193,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Skills</h2>
-          <p>Technical Strengths and the Soft Skills that help me deliver.</p>
+          <p>Technical strengths and the soft skills that help me deliver.</p>
         </div>
 
         <div class="grid-2">
@@ -220,7 +220,7 @@
                 <span class="s-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 2.8 1.6 5.2 4 6.3V22h6v-6.7c2.4-1.1 4-3.5 4-6.3a7 7 0 0 0-7-7Zm2.5 12.1-.5.2V20h-4v-5.7l-.5-.2A5 5 0 1 1 14.5 14.1Z"/></svg>
                 </span>
-                IoT & Embedded: Sensors, MQTT Concepts, Firmware Workflows
+                IoT & Embedded: Sensors, MQTT, firmware workflows
               </li>
               <li>
                 <span class="s-icon" aria-hidden="true">
@@ -294,8 +294,8 @@
                 <span class="tag">PHP/MySQL</span>
               </div>
               <ul class="mini-bullets">
-                <li>Integrated data flow from devices to web dashboard.</li>
-                <li>Designed user-facing pages and automation-ready pipeline structure.</li>
+                <li>Integrated data flow from devices to a web dashboard for monitoring.</li>
+                <li>Designed pages and pipeline structure to support alerts and analytics.</li>
               </ul>
             </div>
           </article>
@@ -317,55 +317,57 @@
                 <span class="tag">HMI</span>
               </div>
               <ul class="mini-bullets">
-                <li>Designed measurement + control logic to support stable operation.</li>
-                <li>Presented live status and events for operator visibility.</li>
+                <li>Designed measurement and control logic to support stable operation.</li>
+                <li>Displayed live status and events for operator visibility.</li>
               </ul>
             </div>
           </article>
 
           <article class="proj proj-alt">
             <div class="proj-copy">
-              <h3>Smart Home IoT Monitoring & Control</h3>
+              <h3>Smart Home IoT Monitoring and Control System</h3>
               <p class="muted">
-                Developed a sensor-to-dashboard system for home environment monitoring with alerts and remote control capability.
+                Developed an end-to-end IoT smart home setup that monitors temperature/humidity (BME280), publishes data via MQTT
+                from a Raspberry Pi, triggers alerts and fan/AC control when thresholds are exceeded, and logs data in InfluxDB.
+                Built a Grafana dashboard to view live readings and historical trends for improved comfort and energy efficiency.
               </p>
               <div class="tags">
                 <span class="tag">Raspberry Pi</span>
                 <span class="tag">BME280</span>
                 <span class="tag">MQTT</span>
-                <span class="tag">Dashboards</span>
+                <span class="tag">InfluxDB</span>
+                <span class="tag">Grafana</span>
               </div>
               <ul class="mini-bullets">
-                <li>Streamed temperature & humidity telemetry and validated real-time updates end-to-end.</li>
-                <li>Designed alert logic (threshold + buzzer/actuation) for safer operation and visibility.</li>
+                <li>Implemented threshold-based alerting and basic control logic for actuation.</li>
+                <li>Designed dashboards to track real-time telemetry and historical patterns.</li>
               </ul>
             </div>
             <div class="proj-media">
-              <div class="img-ph">
-                <span>Project image:<br><strong>assets/img/smart-home.jpg</strong></span>
-              </div>
+              <img class="img-real" src="assets/img/smart-home.jpg" alt="Smart home IoT monitoring and control setup" />
             </div>
           </article>
 
           <article class="proj">
             <div class="proj-media">
-              <div class="img-ph">
-                <span>Project image:<br><strong>assets/img/recipe.jpg</strong></span>
-              </div>
+              <img class="img-real" src="assets/img/recipe.jpg" alt="Recipe sharing platform UI screens" />
             </div>
             <div class="proj-copy">
               <h3>Recipe Sharing Platform</h3>
               <p class="muted">
-                A responsive recipe-sharing website with interactive UI for browsing and exploring content.
+                Developed a recipe-sharing website using JavaScript, HTML, and CSS, enabling users to browse, share, and save
+                recipes with an interactive and responsive UI. Implemented user-friendly features for seamless navigation,
+                enhancing accessibility and engagement.
               </p>
               <div class="tags">
-                <span class="tag">HTML/CSS/JS</span>
-                <span class="tag">UI</span>
-                <span class="tag">Web</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive UI</span>
               </div>
               <ul class="mini-bullets">
-                <li>Built clean pages and navigation for a smooth user experience.</li>
-                <li>Structured content to be easy to extend with database features later.</li>
+                <li>Built clean page flow for listing, details view, and interaction components.</li>
+                <li>Focused on UI consistency and usability across screen sizes.</li>
               </ul>
             </div>
           </article>
@@ -383,14 +385,12 @@
                 <span class="tag">Timers</span>
               </div>
               <ul class="mini-bullets">
-                <li>Implemented a finite-state sequence for vehicle/pedestrian phases and “Do Not Cross” behavior.</li>
-                <li>Validated timing and I/O behavior using keypad/buttons and on-board display indicators.</li>
+                <li>Implemented a finite-state sequence for vehicle/pedestrian phases and safety behavior.</li>
+                <li>Validated timing and I/O behavior using buttons/keypad and indicators.</li>
               </ul>
             </div>
             <div class="proj-media">
-              <div class="img-ph">
-                <span>Project image:<br><strong>assets/img/traffic-light.jpg</strong></span>
-              </div>
+              <img class="img-real" src="assets/img/traffic-light.jpg" alt="Traffic light controller board with keypad and LCD" />
             </div>
           </article>
 
@@ -460,12 +460,14 @@
                 </span>
                 <a href="mailto:swamhtetwintyee2352@gmail.com">swamhtetwintyee2352@gmail.com</a>
               </div>
+
               <div class="cline">
                 <span class="cicon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.65a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1l-2.4 2.2Z"/></svg>
                 </span>
                 <span>+65 91863811</span>
               </div>
+
               <div class="cline">
                 <span class="cicon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
@@ -504,7 +506,7 @@
               </label>
 
               <button class="btn btn-primary" type="submit">Send</button>
-              <p class="hint">Tip: Update the destination email in <code>assets/js/main.js</code>.</p>
+              <p class="hint">Tip: The destination email is set in <code>assets/js/main.js</code>.</p>
             </form>
           </div>
         </div>
