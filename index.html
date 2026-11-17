@@ -1,1171 +1,384 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Swam Htet Wint Yee — Computer Engineering graduate with experience in firmware development, product validation, embedded systems, IoT and software development." />
-  <meta name="theme-color" content="#f4f7f8" />
-  <title>Swam Htet Wint Yee | Computer Engineering Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Swam Htet Wint Yee, Computer Engineering graduate with experience in firmware testing, software development and IoT projects.">
+    <title>Swam Htet Wint Yee | Computer Engineering</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
 
-  <!-- NAVIGATION -->
-  <header class="header" id="top">
-    <div class="container nav">
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">SW<span>.</span></a>
 
-      <a class="brand" href="#home" aria-label="Go to home">
-        <span class="brand-dot"></span>
-        <span class="brand-text">Swam</span>
-      </a>
-
-      <button class="nav-toggle" id="navToggle"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="navMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
-
-        <a class="nav-link" href="#about">About Me</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#education">Education</a>
-        <a class="nav-link" href="#contact">Let's Connect</a>
-
-        <div class="nav-actions">
-
-          <a class="icon-btn"
-             href="https://www.linkedin.com/in/swam-htet-wint-yee-66b14a299/"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="LinkedIn">
-
-            <svg viewBox="0 0 24 24" width="18" height="18">
-              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.4V24h-4v-7.6c0-1.8 0-4-2.4-4s-2.8 1.9-2.8 3.9V24h-4V8Z"/>
-            </svg>
-          </a>
-
-          <a class="icon-btn"
-             href="https://github.com/swammie"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="GitHub">
-
-            <svg viewBox="0 0 24 24" width="18" height="18">
-              <path fill="currentColor" d="M8 17l-5-5 5-5 1.4 1.4L5.8 12l3.6 3.6L8 17Zm8 0-1.4-1.4L18.2 12l-3.6-3.6L16 7l5 5-5 5ZM10 20l3-16h2l-3 16h-2Z"/>
-            </svg>
-          </a>
-
-          <a class="btn btn-soft" href="#contact">Let's talk</a>
-
-        </div>
-      </nav>
-    </div>
-  </header>
-
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero section" id="home">
-
-      <div class="container hero-grid">
-
-        <div class="hero-copy">
-
-          <p class="kicker">Computer Engineering Graduate</p>
-
-          <h1 class="headline">Swam Htet Wint Yee</h1>
-
-          <p class="subhead">
-            Interested in building practical solutions through embedded systems,
-            firmware development, IoT integration and software engineering.
-            Combining hardware and software knowledge with hands-on testing
-            and problem-solving.
-          </p>
-
-          <div class="hero-links">
-            <a class="btn btn-primary" href="#projects">Explore Projects</a>
-            <a class="btn btn-ghost" href="#contact">Get in Touch</a>
-          </div>
-
-          <div class="mini-links">
-            <a class="mini-link" href="mailto:swamhtetwintyee2352@gmail.com">
-              swamhtetwintyee2352@gmail.com
-            </a>
-            <span class="dot">•</span>
-            <a class="mini-link" href="#education">Temasek Polytechnic</a>
-          </div>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-          <div class="avatar-card">
-
-            <div class="card-media md">
-              <img src="assets/img/profile.jpeg"
-                   alt="Portrait of Swam Htet Wint Yee">
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact" class="nav-contact">Let's Connect <span>↗</span></a>
             </div>
+        </nav>
+    </header>
 
-            <div class="avatar-meta">
-              <div class="avatar-name">Swam Htet Wint Yee</div>
-              <div class="avatar-role">Diploma in Computer Engineering</div>
-            </div>
+    <main>
 
-          </div>
+        <!-- About Me -->
+        <section id="about" class="section about-section">
+            <div class="container about-layout">
 
+                <div class="about-content">
+                    <p class="eyebrow">COMPUTER ENGINEERING GRADUATE</p>
 
-          <div class="hero-facts">
+                    <h1>Hi, I'm <span>Swam Htet Wint Yee.</span></h1>
 
-            <div class="fact">
-              <div class="fact-label">Experience</div>
-              <div class="fact-value">Firmware Development & Product Validation</div>
-            </div>
+                    <p class="about-description">
+                        I am a Computer Engineering graduate from Temasek Polytechnic
+                        with practical experience in firmware programming, product
+                        testing and software development. I enjoy working across
+                        hardware and software, solving technical problems and
+                        developing practical solutions through continuous learning.
+                    </p>
 
-            <div class="fact">
-              <div class="fact-label">Technical Focus</div>
-              <div class="fact-value">Embedded Systems • IoT • Software</div>
-            </div>
+                    <div class="about-tags">
+                        <span>Embedded Systems</span>
+                        <span>Software Development</span>
+                        <span>Testing & Debugging</span>
+                        <span>IoT Solutions</span>
+                    </div>
 
-            <div class="fact">
-              <div class="fact-label">Development Tools</div>
-              <div class="fact-value">C/C++ • Python • Java • PHP • MySQL</div>
-            </div>
+                    <div class="about-actions">
+                        <a href="#experience" class="btn btn-primary">Explore My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
 
-          </div>
-        </div>
-
-      </div>
-
-      <div class="hero-bg" aria-hidden="true"></div>
-
-    </section>
-
-
-
-    <!-- 1. ABOUT ME -->
-    <section class="section" id="about">
-
-      <div class="container">
-
-        <div class="section-head">
-          <h2>About Me</h2>
-          <p>A little about my background, interests and approach to engineering.</p>
-        </div>
-
-
-        <div class="card card-wide">
-
-          <p class="lead">
-            Hi, I'm Swam, a Computer Engineering graduate from Temasek Polytechnic
-            and a Director's List award recipient.
-          </p>
-
-          <p class="lead about-paragraph">
-            I have hands-on experience in C/C++ firmware development and product
-            validation through my engineering internship at OSIM International.
-            My academic projects have further allowed me to explore embedded
-            systems, IoT integration, software development and applied AI,
-            bringing together hardware, software and data to build practical
-            solutions.
-          </p>
-
-          <p class="lead about-paragraph">
-            I enjoy understanding how systems work, solving technical problems
-            and turning ideas into functional applications. I'm also comfortable
-            learning new technologies and adapting to different engineering
-            environments.
-          </p>
-
-          <p class="lead about-paragraph">
-            I'm looking forward to contributing my technical skills,
-            problem-solving mindset and willingness to learn to a team where
-            I can continue growing as an engineer.
-          </p>
-
-
-          <div class="cta-row">
-
-            <a class="icon-pill"
-               href="https://www.linkedin.com/in/swam-htet-wint-yee-66b14a299/"
-               target="_blank"
-               rel="noopener noreferrer">
-
-              <span class="icon">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                  <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.4V24h-4v-7.6c0-1.8 0-4-2.4-4s-2.8 1.9-2.8 3.9V24h-4V8Z"/>
-                </svg>
-              </span>
-              LinkedIn
-            </a>
-
-
-            <a class="icon-pill"
-               href="https://github.com/swammie"
-               target="_blank"
-               rel="noopener noreferrer">
-
-              <span class="icon">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                  <path fill="currentColor" d="M8 17l-5-5 5-5 1.4 1.4L5.8 12l3.6 3.6L8 17Zm8 0-1.4-1.4L18.2 12l-3.6-3.6L16 7l5 5-5 5ZM10 20l3-16h2l-3 16h-2Z"/>
-                </svg>
-              </span>
-              GitHub
-            </a>
-
-
-            <a class="icon-pill"
-               href="assets/Swam_Htet_Wint_Yee_Resume.pdf"
-               download>
-
-              <span class="icon">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                  <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L11 13.59V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/>
-                </svg>
-              </span>
-              Download Resume
-            </a>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- 2. PROFESSIONAL EXPERIENCE -->
-    <section class="section" id="experience">
-
-      <div class="container">
-
-        <div class="section-head">
-          <h2>Professional Experience</h2>
-          <p>Industry experience in firmware development, product testing and engineering collaboration.</p>
-        </div>
-
-
-        <div class="stack">
-
-          <article class="xp">
-
-            <div class="card-media xp-img">
-              <img src="assets/img/osim.jpg"
-                   alt="OSIM International engineering experience"
-                   loading="lazy">
-            </div>
-
-
-            <div class="xp-copy">
-
-              <p class="kicker">Engineering Experience</p>
-
-              <h3>OSIM International Pte Ltd</h3>
-
-              <p class="experience-role">
-                Engineering Assistant Intern
-              </p>
-
-              <p class="muted">
-                Mechanical Technology Department · April 2025 – October 2025
-              </p>
-
-
-              <p class="project-intro">
-                During my six-month internship at OSIM International, I worked
-                with the Mechanical Technology team on firmware development
-                and product validation for massage chair systems.
-              </p>
-
-
-              <p class="subsection-label">Key Contributions</p>
-
-              <ul class="mini-bullets">
-
-                <li>
-                  Developed C/C++ firmware for five massage chair models,
-                  implementing program sequences, timing control and safety limits.
-                </li>
-
-                <li>
-                  Flashed firmware onto hardware and performed functional,
-                  pressure and safety testing to verify expected product behaviour.
-                </li>
-
-                <li>
-                  Investigated firmware issues by tracing code logic and
-                  comparing actual device behaviour against expected results.
-                </li>
-
-                <li>
-                  Documented defects with reproduction steps and expected
-                  versus actual results to support troubleshooting and
-                  corrective actions.
-                </li>
-
-                <li>
-                  Collaborated with engineers and product stakeholders
-                  to implement feedback and refine massage programs.
-                </li>
-
-              </ul>
-
-              <div class="tags">
-                <span class="tag">C/C++</span>
-                <span class="tag">Firmware Development</span>
-                <span class="tag">Firmware Flashing</span>
-                <span class="tag">Functional Testing</span>
-                <span class="tag">Debugging</span>
-                <span class="tag">Root Cause Analysis</span>
-              </div>
+                <div class="about-image">
+                    <img src="assets/images/profile.jpg" alt="Swam Htet Wint Yee">
+                </div>
 
             </div>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
+        </section>
 
 
+        <!-- Professional Experience -->
+        <section id="experience" class="section">
+            <div class="container">
 
-    <!-- 3. ACADEMIC PROJECTS -->
-    <section class="section" id="projects">
+                <div class="section-heading">
+                    <p class="eyebrow">MY INDUSTRY EXPERIENCE</p>
+                    <h2>Professional Experience</h2>
+                    <p>Hands-on experience in firmware development, product validation and customer-facing work.</p>
+                </div>
 
-      <div class="container">
+                <article class="experience-card">
+                    <div class="experience-image">
+                        <img src="assets/images/osim.jpg" alt="OSIM engineering internship">
+                    </div>
 
-        <div class="section-head">
-          <h2>Academic Projects</h2>
-          <p>
-            Practical projects exploring embedded systems, IoT, software
-            development, automation and applied AI.
-          </p>
-        </div>
+                    <div class="experience-content">
+                        <div class="card-topline">
+                            <span class="card-category">ENGINEERING INTERNSHIP</span>
+                            <span class="card-date">Apr 2025 – Oct 2025</span>
+                        </div>
 
+                        <h3>Engineering Assistant Intern</h3>
+                        <h4>OSIM International Pte Ltd</h4>
 
-        <div class="stack">
+                        <p>
+                            Worked with the engineering team on massage chair firmware
+                            programming using C/C++, translating program specifications
+                            into control logic and operating sequences.
+                        </p>
 
+                        <p>
+                            Performed firmware flashing and functional, regression,
+                            timing and safety testing. Investigated issues, documented
+                            defects and supported retesting to verify product performance.
+                        </p>
 
-          <!-- SMART AQUA GROW -->
-          <article class="proj">
-
-            <div class="card-media proj-img">
-              <img src="assets/img/smart-aqua.png"
-                   alt="Smart Aqua Grow IoT and AI project"
-                   loading="lazy">
-            </div>
-
-
-            <div class="proj-copy">
-
-              <p class="kicker">Featured Project · Team Leader</p>
-
-              <h3>Smart Aqua Grow</h3>
-
-              <p class="muted">
-                IoT Monitoring & AI-Based Pest Detection System
-              </p>
-
-              <p class="project-intro">
-                An IoT-based rooftop aquaponics monitoring system combining
-                environmental sensors, backend services, a web dashboard
-                and AI-based pest detection.
-              </p>
-
-
-              <p class="subsection-label">Key Contributions</p>
-
-              <ul class="mini-bullets">
-
-                <li>
-                  Led a three-member team and coordinated project tasks,
-                  development progress and technical integration.
-                </li>
-
-                <li>
-                  Developed the web application, including monitoring
-                  dashboard, AI Detection, Growth & Harvest, Control and
-                  Suggestions pages.
-                </li>
-
-                <li>
-                  Integrated environmental sensor data and backend services
-                  using PHP APIs and a MySQL database.
-                </li>
-
-                <li>
-                  Integrated ESP32-CAM image capture with a YOLO-based
-                  pest detection model to identify potential pest activity.
-                </li>
-
-                <li>
-                  Implemented Telegram notifications to alert users
-                  when potential pests were detected.
-                </li>
-
-                <li>
-                  Troubleshot communication and data integration issues
-                  across the device, API and database layers.
-                </li>
-
-              </ul>
-
-
-              <div class="tags">
-                <span class="tag">ESP32</span>
-                <span class="tag">ESP32-CAM</span>
-                <span class="tag">IoT</span>
-                <span class="tag">Python</span>
-                <span class="tag">YOLO</span>
-                <span class="tag">PHP</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">JavaScript</span>
-              </div>
+                        <div class="experience-tags">
+                            <span>C / C++</span>
+                            <span>Firmware Programming</span>
+                            <span>Functional Testing</span>
+                            <span>Debugging</span>
+                        </div>
+                    </div>
+                </article>
 
             </div>
-
-          </article>
-
+        </section>
 
 
-          <!-- IC TESTER -->
-          <article class="proj proj-alt">
+        <!-- Academic Projects -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
 
-            <div class="card-media proj-img">
-              <img src="assets/img/ic-tester.png"
-                   alt="IC Tester Temperature Monitoring System"
-                   loading="lazy">
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT I HAVE BUILT</p>
+                    <h2>Academic Projects</h2>
+                    <p>Selected projects that demonstrate my technical skills and problem-solving approach.</p>
+                </div>
+
+                <div class="project-list">
+
+                    <!-- Smart Aqua Grow -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/smart-aqua-grow.jpg" alt="Smart Aqua Grow project">
+                        </div>
+
+                        <div class="project-content">
+                            <span class="card-category">IOT · WEB DEVELOPMENT · AI</span>
+                            <h3>Smart Aqua Grow</h3>
+
+                            <p>
+                                Developed an IoT-based aquaponics monitoring platform
+                                that displays environmental and plant data through a
+                                web dashboard. Integrated sensor data, image-based pest
+                                detection and Telegram alerts to support plant monitoring.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>PHP</span>
+                                <span>SQL</span>
+                                <span>Python</span>
+                                <span>ESP32-CAM</span>
+                                <span>YOLO</span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- SalonSync -->
+                    <article class="project-card project-reverse">
+                        <div class="project-image">
+                            <img src="assets/images/salonsync.jpg" alt="SalonSync Android application">
+                        </div>
+
+                        <div class="project-content">
+                            <span class="card-category">ANDROID · MOBILE APPLICATION</span>
+                            <h3>SalonSync</h3>
+
+                            <p>
+                                Developed an Android salon appointment application
+                                with customer and staff interfaces for service selection,
+                                booking and appointment management. Connected the
+                                application to a PHP REST API and MySQL database.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Android Studio</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- IC Tester -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/ic-tester.jpg" alt="IC Tester Temperature Monitoring System">
+                        </div>
+
+                        <div class="project-content">
+                            <span class="card-category">HARDWARE · MONITORING SYSTEM</span>
+                            <h3>IC Tester Temperature Monitoring System</h3>
+
+                            <p>
+                                Built a temperature monitoring system using sensor
+                                circuits and MQTT communication to track operating
+                                conditions. Developed a LabVIEW interface with
+                                temperature-based fan control.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>LabVIEW</span>
+                                <span>MQTT</span>
+                                <span>Sensors</span>
+                                <span>Hardware Integration</span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Traffic Light -->
+                    <article class="project-card project-reverse">
+                        <div class="project-image">
+                            <img src="assets/images/traffic-light.jpg" alt="Traffic Light Control System">
+                        </div>
+
+                        <div class="project-content">
+                            <span class="card-category">PROGRAMMING · EMBEDDED SYSTEMS</span>
+                            <h3>Traffic Light Control System</h3>
+
+                            <p>
+                                Designed a traffic light control system using C
+                                programming and finite state machine concepts.
+                                Implemented structured state transitions to manage
+                                traffic light sequences.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>C</span>
+                                <span>Finite State Machine</span>
+                                <span>Logic Design</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
             </div>
+        </section>
 
 
-            <div class="proj-copy">
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
 
-              <h3>IC Tester Temperature Monitoring System</h3>
+                <div class="section-heading">
+                    <p class="eyebrow">MY TECHNICAL TOOLKIT</p>
+                    <h2>Skills</h2>
+                    <p>Technologies and practical skills developed through my studies and projects.</p>
+                </div>
 
-              <p class="muted">
-                Hardware Monitoring & Automation
-              </p>
+                <div class="skills-grid">
 
-              <p class="project-intro">
-                A temperature monitoring system developed for an IC tester,
-                combining sensor circuits, LabVIEW HMI and MQTT communication
-                for real-time monitoring and automated thermal control.
-              </p>
+                    <div class="skill-card">
+                        <div class="skill-icon">01</div>
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span>C</span>
+                            <span>C++</span>
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
 
+                    <div class="skill-card">
+                        <div class="skill-icon">02</div>
+                        <h3>Hardware & Embedded</h3>
+                        <div class="skill-tags">
+                            <span>ESP32</span>
+                            <span>Arduino IDE</span>
+                            <span>Sensor Integration</span>
+                            <span>Firmware Flashing</span>
+                            <span>MQTT</span>
+                        </div>
+                    </div>
 
-              <p class="subsection-label">Key Contributions</p>
+                    <div class="skill-card">
+                        <div class="skill-icon">03</div>
+                        <h3>Software & Web</h3>
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                            <span>Android Studio</span>
+                        </div>
+                    </div>
 
-              <ul class="mini-bullets">
+                    <div class="skill-card">
+                        <div class="skill-icon">04</div>
+                        <h3>Engineering Practices</h3>
+                        <div class="skill-tags">
+                            <span>Functional Testing</span>
+                            <span>Debugging</span>
+                            <span>Problem Solving</span>
+                            <span>Documentation</span>
+                            <span>Team Collaboration</span>
+                        </div>
+                    </div>
 
-                <li>
-                  Developed temperature monitoring functionality using
-                  sensor circuits and LabVIEW.
-                </li>
-
-                <li>
-                  Integrated MQTT communication to transmit and display
-                  real-time monitoring information.
-                </li>
-
-                <li>
-                  Implemented threshold-based logic to identify abnormal
-                  temperature conditions and support fan control.
-                </li>
-
-                <li>
-                  Tested sensor readings and interface behaviour to
-                  improve monitoring reliability.
-                </li>
-
-              </ul>
-
-
-              <div class="tags">
-                <span class="tag">LabVIEW</span>
-                <span class="tag">MQTT</span>
-                <span class="tag">Temperature Sensors</span>
-                <span class="tag">Hardware Testing</span>
-                <span class="tag">Automation</span>
-              </div>
-
+                </div>
             </div>
-
-          </article>
-
-
-
-          <!-- SALONSYNC -->
-          <article class="proj">
-
-            <div class="card-media proj-img">
-              <img src="assets/img/salonsync.png"
-                   alt="SalonSync Android application"
-                   loading="lazy">
-            </div>
-
-
-            <div class="proj-copy">
-
-              <h3>SalonSync</h3>
-
-              <p class="muted">
-                Android Salon Appointment Booking Application
-              </p>
-
-              <p class="project-intro">
-                A mobile booking application designed for a single salon,
-                allowing customers to book appointments while staff manage
-                bookings and service schedules.
-              </p>
-
-
-              <p class="subsection-label">Key Contributions</p>
-
-              <ul class="mini-bullets">
-
-                <li>
-                  Developed Android application features using Java
-                  in Android Studio.
-                </li>
-
-                <li>
-                  Implemented customer and staff login roles with
-                  appointment management functionality.
-                </li>
-
-                <li>
-                  Integrated PHP REST APIs and MySQL for backend
-                  communication and data management.
-                </li>
-
-                <li>
-                  Developed service selection, available time-slot
-                  selection and appointment status management.
-                </li>
-
-                <li>
-                  Built customer appointment views and staff
-                  management interfaces.
-                </li>
-
-              </ul>
-
-
-              <div class="tags">
-                <span class="tag">Java</span>
-                <span class="tag">Android Studio</span>
-                <span class="tag">PHP</span>
-                <span class="tag">REST API</span>
-                <span class="tag">MySQL</span>
-              </div>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- TRAFFIC LIGHT -->
-          <article class="proj proj-alt">
-
-            <div class="card-media proj-img">
-              <img src="assets/img/traffic-light.jpg"
-                   alt="Traffic Light and Pedestrian Crossing Controller"
-                   loading="lazy">
-            </div>
-
-
-            <div class="proj-copy">
-
-              <h3>Traffic Light & Pedestrian Crossing Controller</h3>
-
-              <p class="muted">
-                Embedded C & Microcontroller
-              </p>
-
-              <p class="project-intro">
-                A microcontroller-based traffic control system implementing
-                timed traffic sequences and pedestrian crossing logic.
-              </p>
-
-
-              <p class="subsection-label">Key Contributions</p>
-
-              <ul class="mini-bullets">
-
-                <li>
-                  Developed finite-state machine logic to manage
-                  traffic light sequences.
-                </li>
-
-                <li>
-                  Implemented timing control and pedestrian crossing
-                  behaviour.
-                </li>
-
-                <li>
-                  Tested state transitions and hardware responses
-                  to ensure consistent system operation.
-                </li>
-
-              </ul>
-
-
-              <div class="tags">
-                <span class="tag">C</span>
-                <span class="tag">Microcontroller</span>
-                <span class="tag">Finite State Machine</span>
-                <span class="tag">Embedded Systems</span>
-              </div>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <!-- 4. SKILLS -->
-    <section class="section" id="skills">
-
-      <div class="container">
-
-        <div class="section-head">
-          <h2>Skills</h2>
-          <p>
-            Technical knowledge, development tools and professional
-            strengths developed through academic and practical experience.
-          </p>
-        </div>
-
-
-        <div class="grid-2">
-
-
-          <!-- TECHNICAL SKILLS -->
-          <div class="card">
-
-            <div class="card-title-row">
-              <div class="chip">Technical Skills</div>
-              <div class="tiny">Tools & technologies</div>
-            </div>
-
-
-            <ul class="skill-list">
-
-              <li>
-                <span class="s-icon">⌨</span>
-                <span>
-                  <strong>Programming Languages</strong><br>
-                  C, C++, Python, Java, JavaScript, PHP, SQL
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">⚙</span>
-                <span>
-                  <strong>Embedded Systems & IoT</strong><br>
-                  ESP32, ESP32-CAM, Arduino, Firmware Development,
-                  Sensor Integration
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">⌁</span>
-                <span>
-                  <strong>Hardware & Communication</strong><br>
-                  Circuit Analysis, Hardware Prototyping,
-                  MQTT, LoRa, GPIO, TCP/IP
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">⌘</span>
-                <span>
-                  <strong>Software & Web Development</strong><br>
-                  HTML, CSS, JavaScript, PHP, REST APIs,
-                  MySQL, Android Studio
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">◉</span>
-                <span>
-                  <strong>Data & Applied AI</strong><br>
-                  Python, YOLO-Based Object Detection,
-                  MySQL, Data Visualisation
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">✓</span>
-                <span>
-                  <strong>Development & Testing</strong><br>
-                  Git, GitHub, LabVIEW, Firmware Flashing,
-                  Functional Testing, Debugging,
-                  Root Cause Analysis
-                </span>
-              </li>
-
-            </ul>
-
-          </div>
-
-
-
-          <!-- SOFT SKILLS -->
-          <div class="card">
-
-            <div class="card-title-row">
-              <div class="chip">Professional Skills</div>
-              <div class="tiny">How I work</div>
-            </div>
-
-
-            <ul class="skill-list">
-
-              <li>
-                <span class="s-icon">◎</span>
-                <span>
-                  <strong>Problem-Solving & Critical Thinking</strong><br>
-                  Analysing issues and finding practical solutions
-                  through structured troubleshooting.
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">◈</span>
-                <span>
-                  <strong>Analytical Thinking & Attention to Detail</strong><br>
-                  Reviewing technical requirements and
-                  checking results carefully.
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">↗</span>
-                <span>
-                  <strong>Communication & Collaboration</strong><br>
-                  Working with team members and stakeholders
-                  to achieve shared objectives.
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">◆</span>
-                <span>
-                  <strong>Ownership & Responsibility</strong><br>
-                  Taking responsibility for assigned tasks
-                  and following through on deliverables.
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">↻</span>
-                <span>
-                  <strong>Adaptability & Continuous Learning</strong><br>
-                  Learning unfamiliar technologies and
-                  adapting to new technical environments.
-                </span>
-              </li>
-
-
-              <li>
-                <span class="s-icon">▤</span>
-                <span>
-                  <strong>Documentation & Time Management</strong><br>
-                  Organising tasks, recording findings and
-                  managing project deadlines.
-                </span>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <!-- 5. EDUCATION & AWARDS -->
-    <section class="section" id="education">
-
-      <div class="container">
-
-        <div class="section-head">
-          <h2>Education & Awards</h2>
-          <p>My academic background and achievements.</p>
-        </div>
-
-
-        <div class="split">
-
-          <div class="card-media lg">
-            <img src="assets/img/school.jpg"
-                 alt="Temasek Polytechnic"
-                 loading="lazy">
-          </div>
-
-
-          <div class="content">
-
-            <p class="kicker">Education</p>
-
-            <h3>Temasek Polytechnic</h3>
-
-            <p class="muted">
-              Diploma in Computer Engineering
-            </p>
-
-            <p class="muted education-date">
-              February 2023 – April 2026
-            </p>
-
-
-            <div class="bullets">
-
-              <div class="bullet">
-                <span class="b-dot"></span>
-                <span>
-                  Completed a Diploma in Computer Engineering,
-                  developing knowledge across hardware and software.
-                </span>
-              </div>
-
-
-              <div class="bullet">
-                <span class="b-dot"></span>
-                <span>
-                  Relevant coursework: Microcontroller Applications,
-                  Internet of Things, Systems and Network Integration,
-                  Electronic Prototyping, Digital Fundamentals,
-                  Circuit Analysis, and Electronic Devices and Circuits.
-                </span>
-              </div>
+        </section>
+
+
+        <!-- Education & Awards -->
+        <section id="education" class="section education-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+                    <h2>Education & Awards</h2>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-mark">TP</div>
+
+                    <div class="education-content">
+                        <span class="card-date">Feb 2023 – Apr 2026</span>
+                        <h3>Temasek Polytechnic</h3>
+                        <h4>Diploma in Computer Engineering</h4>
+                        <p>CGPA: 3.19</p>
+
+                        <div class="award">
+                            <span class="award-symbol">✦</span>
+                            <div>
+                                <strong>Awards for Excellence – Director's List Award</strong>
+                                <p>School of Engineering · Top 10% Academic Achievers · AY 2023/2024, Semester 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+        </section>
 
 
-            <div class="divider-soft"></div>
+        <!-- Let's Connect -->
+        <section id="contact" class="section contact-section">
+            <div class="container contact-container">
 
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2>Interested in working together?</h2>
 
-            <div class="award-row">
-
-              <div class="card-media award">
-                <img src="assets/img/award.png"
-                     alt="Director's List Award"
-                     loading="lazy">
-              </div>
-
-
-              <div class="award-copy">
-
-                <p class="kicker">Academic Achievement</p>
-
-                <h4>Awards for Excellence – Director's List Award</h4>
-
-                <p class="muted">
-                  School of Engineering, Temasek Polytechnic
+                <p>
+                    I am open to opportunities where I can apply my engineering
+                    knowledge, contribute to a team and continue developing my
+                    technical skills.
                 </p>
 
-                <p class="muted">
-                  Recognised among the top 10% of academic achievers
-                  for AY 2023/2024, Semester 1.
-                </p>
+                <a href="mailto:swamhtetwintyee2352@gmail.com" class="btn btn-primary">
+                    Get in Touch <span>↗</span>
+                </a>
 
-              </div>
+                <div class="social-links">
+                    <a href="mailto:swamhtetwintyee2352@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/swam-htet-wint-yee-66b14a299/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="https://github.com/swammie" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                </div>
 
             </div>
+        </section>
 
-          </div>
+    </main>
 
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Swam Htet Wint Yee</p>
+            <p>Designed with care.</p>
         </div>
-
-      </div>
-    </section>
-
-
-
-    <!-- 6. LET'S CONNECT -->
-    <section class="section" id="contact">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <h2>Let's Connect</h2>
-
-          <p>
-            I'm open to full-time opportunities in embedded systems,
-            IoT engineering, firmware development, software development
-            and technical engineering.
-
-            I'm always interested in connecting with professionals,
-            exploring new technologies and contributing to projects
-            that solve real-world problems.
-
-            Feel free to reach out. I'd be happy to connect and discuss
-            potential opportunities.
-          </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-
-          <!-- CONTACT DETAILS -->
-          <div class="card">
-
-            <h3>Get in Touch</h3>
-
-            <div class="contact-lines">
-
-
-              <div class="cline">
-
-                <span class="cicon">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor" d="M12 13.5 2 6.75V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6.75L12 13.5Zm0-2.5L22 4H2l10 7Z"/>
-                  </svg>
-                </span>
-
-                <a href="mailto:swamhtetwintyee2352@gmail.com">
-                  swamhtetwintyee2352@gmail.com
-                </a>
-
-              </div>
-
-
-              <div class="cline">
-
-                <span class="cicon">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor" d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.65a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1l-2.4 2.2Z"/>
-                  </svg>
-                </span>
-
-                <span>+65 91863811</span>
-
-              </div>
-
-
-              <div class="cline">
-
-                <span class="cicon">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/>
-                  </svg>
-                </span>
-
-                <span>Singapore</span>
-
-              </div>
-
-
-              <div class="cline">
-
-                <span class="cicon">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 0 1 6.32 12.9L5.1 5.68A7.96 7.96 0 0 1 12 4Zm-8 8a7.96 7.96 0 0 1 1.1-4.02L18.32 19.1A8 8 0 0 1 4 12Z"/>
-                  </svg>
-                </span>
-
-                <a href="https://www.linkedin.com/in/swam-htet-wint-yee-66b14a299/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  LinkedIn Profile
-                </a>
-
-              </div>
-
-
-              <div class="cline">
-
-                <span class="cicon">
-                  <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor" d="M8 17l-5-5 5-5 1.4 1.4L5.8 12l3.6 3.6L8 17Zm8 0-1.4-1.4L18.2 12l-3.6-3.6L16 7l5 5-5 5ZM10 20l3-16h2l-3 16h-2Z"/>
-                  </svg>
-                </span>
-
-                <a href="https://github.com/swammie"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  GitHub Portfolio
-                </a>
-
-              </div>
-
-            </div>
-
-            <div class="divider-soft"></div>
-
-            <p class="muted">
-              Thank you for visiting my portfolio. I look forward
-              to connecting with you!
-            </p>
-
-          </div>
-
-
-
-          <!-- EMAIL FORM -->
-          <div class="card">
-
-            <h3>Send Me a Message</h3>
-
-            <form id="contactForm" class="form">
-
-              <label>
-                <span>Your name</span>
-                <input type="text"
-                       name="name"
-                       placeholder="Your name"
-                       required>
-              </label>
-
-
-              <label>
-                <span>Your email</span>
-                <input type="email"
-                       name="from"
-                       placeholder="you@example.com"
-                       required>
-              </label>
-
-
-              <label>
-                <span>Message</span>
-                <textarea name="message"
-                          rows="6"
-                          placeholder="Write your message..."
-                          required></textarea>
-              </label>
-
-
-              <button class="btn btn-primary" type="submit">
-                Send Message
-              </button>
-
-            </form>
-
-          </div>
-
-        </div>
-
-
-        <footer class="footer">
-          <p>© <span id="year"></span> Swam Htet Wint Yee. All rights reserved.</p>
-        </footer>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- JAVASCRIPT -->
-  <script>
-
-    // Mobile navigation
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    navToggle?.addEventListener('click', () => {
-
-      const isOpen = navMenu.classList.toggle('open');
-
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-
-      navToggle.setAttribute(
-        'aria-label',
-        isOpen ? 'Close menu' : 'Open menu'
-      );
-
-    });
-
-
-    // Close mobile menu after clicking a navigation link
-    document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
-
-      link.addEventListener('click', () => {
-
-        navMenu.classList.remove('open');
-
-        navToggle.setAttribute('aria-expanded', 'false');
-
-        navToggle.setAttribute('aria-label', 'Open menu');
-
-      });
-
-    });
-
-
-    // Automatically update footer year
-    document.getElementById('year').textContent =
-      new Date().getFullYear();
-
-
-    // Contact form opens the user's email application
-    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-
-      e.preventDefault();
-
-      const form = e.currentTarget;
-
-      const name = form.elements['name'].value.trim();
-      const email = form.elements['from'].value.trim();
-      const message = form.elements['message'].value.trim();
-
-      const subject = encodeURIComponent(
-        `Portfolio message from ${name}`
-      );
-
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      );
-
-      window.location.href =
-        `mailto:swamhtetwintyee2352@gmail.com?subject=${subject}&body=${body}`;
-
-    });
-
-  </script>
+    </footer>
 
 </body>
 </html>
